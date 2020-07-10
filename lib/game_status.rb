@@ -59,11 +59,9 @@ end
 
 def winner(board)
   if over?(board)
-    game_won = won?(board)
-    print game_won
-    if game_won[0] == "X"
+    if board[0] == "X"
       return "X"
-    elsif game_won[0] == "O"
+    elsif board[0] == "O"
       return "O"
     end
   end
