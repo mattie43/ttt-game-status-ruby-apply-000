@@ -3,7 +3,7 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
-WIN_CHECK = " "
+win_check = " "
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   # Horizontal
@@ -29,10 +29,10 @@ def won?(board)
     position_3 = board[win_index_3]
     
     if position_1 == "X" && position_2 == "X" && position_3 == "X"
-      WIN_CHECK = "X"
+      win_check = "X"
       return win_combination
     elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
-      WIN_CHECK = "O"
+      win_check = "O"
       return win_combination
     end
   end
@@ -60,7 +60,7 @@ end
 
 def winner(board)
   if won?(board)
-    return WIN_CHECK
+    return win_check
   end
   nil
 end
