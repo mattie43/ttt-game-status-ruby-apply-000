@@ -63,8 +63,7 @@ def winner(board)
     ind = game_won[0]
     if board[ind] == "X"
       return "X"
-    end
-    if board[ind] == "O"
+    elsif board[ind] == "O"
       return "O"
     end
   end
