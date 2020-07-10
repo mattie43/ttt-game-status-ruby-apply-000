@@ -59,10 +59,12 @@ end
 
 def winner(board)
   if over?(board)
-    if board[0] == "X"
+    game_won = won?(board)
+    ind = game_won[0]
+    if board[ind] == "X"
       return "X"
     end
-    if board[0] == "O"
+    if board[ind] == "O"
       return "O"
     end
   end
